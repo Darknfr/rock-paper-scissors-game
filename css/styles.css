@@ -1,0 +1,87 @@
+body {
+	background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+	font-family: Arial, sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.button-container {
+	max-width: 500px;
+	width: 90%;
+	margin: auto;
+	background: #fff;
+	padding: 40px 30px;
+	border-radius: 16px;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+	text-align: center;
+}
+.choices button {
+	margin: 15px;
+	padding: 20px 30px;
+	font-size: 32px;
+	border: none;
+	border-radius: 8px;
+	background: #ffda79;
+	color: #333;
+	cursor: pointer;
+	transition: background 0.2s, transform 0.2s;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.choices button:hover {
+	background: #ffe066;
+	transform: scale(1.1);
+}
+
+.choices button:active {
+	animation: clickAnim 0.2s;
+}
+
+.choices button.chosen {
+	box-shadow: 0 0 20px 5px #66a6ff55;
+	background: #b2f7ef;
+	transform: scale(1.15);
+	transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.reset-btn {
+	margin-top: 24px;
+	padding: 12px 28px;
+	font-size: 20px;
+	border: none;
+	border-radius: 8px;
+	background: #66a6ff;
+	color: #fff;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+	transition: background 0.2s, transform 0.2s;
+}
+.reset-btn:hover {
+	background: #89f7fe;
+	transform: scale(1.08);
+}
+.reset-btn.reset-anim {
+	background: #ffda79;
+	color: #333;
+	transform: scale(1.15);
+	box-shadow: 0 0 20px 5px #ffda7955;
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+@keyframes clickAnim {
+	0% { transform: scale(1.1); }
+	50% { transform: scale(0.95); }
+	100% { transform: scale(1.05); }
+}
+
+.result {
+	margin: 30px 0;
+	font-size: 22px;
+	min-height: 28px;
+}
+.score {
+	display: flex;
+	justify-content: space-around;
+	font-size: 20px;
+	margin-top: 18px;
+}
